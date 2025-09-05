@@ -27,7 +27,17 @@ return {
                 }
             },
             sections = {
-                lualine_a = {'mode'},
+                lualine_a = {
+                    {
+                        function()
+                            local reg = vim.fn.reg_recording()
+                            if reg == "" then
+                                return require('lualine.utils.mode').get_mode()
+                            end
+                            return "REC @" .. reg
+                        end,
+                    }
+                },
                 lualine_b = {'branch', 'diff', 'diagnostics'},
                 lualine_c = {'filename'},
                 lualine_x = {'encoding', 'fileformat', 'filetype'},

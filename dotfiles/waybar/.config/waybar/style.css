@@ -1,7 +1,9 @@
 /* Catppuccin Mocha color scheme */
 @define-color base    rgba(30, 30, 46, 0.6);
-@define-color mantle   #181825;
-@define-color crust    #11111b;
+@define-color mantle #181825;
+@define-color crust  #11111b;
+@define-color base   rgba(30, 30, 46, 0.92);
+@define-color shadow rgba(0, 0, 0, .78);
 
 @define-color text     #cdd6f4;
 @define-color subtext0 #a6adc8;
@@ -42,6 +44,7 @@ window#waybar{
 
 /* Main Module settings */
 .modules-left {
+<<<<<<< HEAD
     padding:9px;
     margin:10px 0px 10px 10px;
     border-radius:11px;
@@ -63,12 +66,35 @@ window#waybar{
     box-shadow: 0px 0px 3px rgba(0, 0, 0, .78);
 }
 
+=======
+    padding:7px;
+    margin:9px 0px 9px 9px;
+    border-radius:10px;
+    background: alpha(@mantle,.7);
+    box-shadow: 0px 0px 5px @subtext1;
+}
+.modules-center {
+    padding:7px;
+    margin:9px 0px 9px 0px;
+    border-radius:10px;
+    background: alpha(@mantle,.7);
+    box-shadow: 0px 0px 5px @subtext1;
+}
+.modules-right {
+    padding:7px;
+    margin: 9px 9px 9px 0px;
+    border-radius:10px;
+    background: alpha(@mantle,.7);
+    box-shadow: 0px 0px 5px @subtext1;
+}
+
+/* Module Configurations */
+>>>>>>> f6326c2 (Updated config with epik-shell.)
 tooltip {
     background:@base;
     color: @lavender;
 }
 
-/* Module Configurations */
 #clock:hover,
 #custom-pacman:hover,
 #custom-notification:hover

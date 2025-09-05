@@ -42,8 +42,24 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
 
 -- File Text Wrapping
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = {"html" },
+  pattern = {"html, javascript" },
   callback = function()
     vim.opt_local.textwidth = 90
   end,
 })
+
+-- File-specific indentation settings
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {"javascript", "javascriptreact", "typescript", "typescriptreact",
+             "html", "css", "json"},
+  callback = function()
+    vim.opt_local.tabstop = 2
+    vim.opt_local.softtabstop = 2
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.expandtab = true
+  end,
+})
+
+-- Styling
+vim.opt.termguicolors = true
+-- vim.opt.winborder = "rounded"

@@ -10,6 +10,6 @@ return {
             null_ls.builtins.diagnostics.verilator,   -- Verilog linter
         })
 
-        vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+        vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {desc = "Buffer Format"})
     end,
 }

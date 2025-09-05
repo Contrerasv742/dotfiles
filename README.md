@@ -32,7 +32,7 @@ need to be updated.
 
 # Setup: Windows
 
-![Screenshot](imgs/windows/Window_manager_and_tmux_config.png)
+![Screenshot](windows/imgs/Window_manager_and_tmux_config.png)
 
 # Components and Reasoning
 

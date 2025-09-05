@@ -82,16 +82,6 @@
 }
 
 window {
-    background: @base;
-    min-width: 350px;
-}
-
-window.swaync-control-center {
-    background: transparent;
-    min-width: 350px;
-}
-
-window.swaync-main-window {
     background: transparent;
 }
 
@@ -104,7 +94,6 @@ window.swaync-main-window {
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
     padding-bottom: 5px;
     min-height: 420px;
-    min-width: 350px;
     font-family: 'CodeNewRoman Nerd Font Propo';
 }
 
@@ -176,9 +165,8 @@ window.swaync-main-window {
     margin-bottom: 4px;
 }
 
-.control-center .notification-row .notification-background .notification
-.notification-content .body, .floating-notifications.background
-.notification-background .notification .notification-content .body {
+.control-center .notification-row .notification-background .notification .notification-content .body,
+.floating-notifications.background .notification-background .notification .notification-content .body {
     font-family: 'CodeNewRoman Nerd Font Propo';
     font-size: 0.95rem;
     font-weight: 400;
@@ -187,9 +175,8 @@ window.swaync-main-window {
     opacity: 0.9;
 }
 
-.control-center .notification-row .notification-background .notification
-.notification-content .time, .floating-notifications.background
-.notification-background .notification .notification-content .time {
+.control-center .notification-row .notification-background .notification .notification-content .time,
+.floating-notifications.background .notification-background .notification .notification-content .time {
     font-size: 0.85rem;
     font-weight: 500;
     color: @subtext0;
@@ -197,61 +184,46 @@ window.swaync-main-window {
 }
 
 /* Normal and Low Priority Notifications */
-.control-center .notification-row .notification-background .notification.low
-.notification-content label,
-.control-center .notification-row .notification-background .notification.normal
-.notification-content label,
-.floating-notifications.background .notification-background .notification.low
-.notification-content label,
-.floating-notifications.background .notification-background
-.notification.normal .notification-content label {
+.control-center .notification-row .notification-background .notification.low .notification-content label,
+.control-center .notification-row .notification-background .notification.normal .notification-content label,
+.floating-notifications.background .notification-background .notification.low .notification-content label,
+.floating-notifications.background .notification-background .notification.normal .notification-content label {
     padding: 4px 8px;
 }
 
-.control-center .notification-row .notification-background .notification.low
-.notification-content .body, .control-center .notification-row
-.notification-background .notification.normal .notification-content .body,
-.floating-notifications.background .notification-background .notification.low
-.notification-content .body, .floating-notifications.background
-.notification-background .notification.normal .notification-content .body {
+.control-center .notification-row .notification-background .notification.low .notification-content .body,
+.control-center .notification-row .notification-background .notification.normal .notification-content .body,
+.floating-notifications.background .notification-background .notification.low .notification-content .body,
+.floating-notifications.background .notification-background .notification.normal .notification-content .body {
     color: @subtext1;
 }
 
 /* Critical Notifications */
-.control-center .notification-row .notification-background
-.notification.critical, .floating-notifications.background
-.notification-background .notification.critical {
+.control-center .notification-row .notification-background .notification.critical,
+.floating-notifications.background .notification-background .notification.critical {
     border-color: @red;
     animation: critical-pulse 2s ease-in-out infinite;
 }
 
-.control-center .notification-row .notification-background
-.notification.critical .notification-content,
-.floating-notifications.background .notification-background
-.notification.critical .notification-content {
+.control-center .notification-row .notification-background .notification.critical .notification-content,
+.floating-notifications.background .notification-background .notification.critical .notification-content {
     background: alpha(@red, 0.1);
     border: 1px solid alpha(@red, 0.3);
 }
 
-.control-center .notification-row .notification-background
-.notification.critical .notification-content .summary,
-.floating-notifications.background .notification-background
-.notification.critical .notification-content .summary {
+.control-center .notification-row .notification-background .notification.critical .notification-content .summary,
+.floating-notifications.background .notification-background .notification.critical .notification-content .summary {
     color: @red;
     font-weight: 700;
 }
 
-.control-center .notification-row .notification-background
-.notification.critical .notification-content .body,
-.floating-notifications.background .notification-background
-.notification.critical .notification-content .body {
+.control-center .notification-row .notification-background .notification.critical .notification-content .body,
+.floating-notifications.background .notification-background .notification.critical .notification-content .body {
     color: @text;
 }
 
-.control-center .notification-row .notification-background
-.notification.critical .notification-content image,
-.floating-notifications.background .notification-background
-.notification.critical .notification-content image {
+.control-center .notification-row .notification-background .notification.critical .notification-content image,
+.floating-notifications.background .notification-background .notification.critical .notification-content image {
     background-color: unset;
     color: @red;
 }
@@ -499,6 +471,7 @@ scrollbar slider:hover {
     background: alpha(@overlay1, 0.7);
 }
 
+/* Enhanced notification widget hover effects */
 .notification widget:hover {
     background: alpha(@surface1, 0.2);
     border-radius: 8px;

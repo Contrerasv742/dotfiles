@@ -22,7 +22,7 @@
     "custom/notification": {
         "tooltip": false,
         "format": "",
-        "on-click": "swaync-client -t -sw",
+        "on-click": "swaync-client -t -d",
         "escape": true
     },
     "custom/power": {
@@ -87,11 +87,10 @@
     },
     "wireplumber": {
         "format": "{icon} {volume:2}%",
-        "format-bluetooth": "{icon} {volume}%",
-        "format-muted": "MUTED",
-        // "format-muted": "",
+        "format-bluetooth": "{icon}  {volume}%",
+        "format-muted": "󰝟 0%",
         "format-icons": {
-            "headphones": "",
+            "headphones": "󰋋",
             "default": [
                 "󰕿", // Low volume
                 "󰖀", // Medium volume
@@ -100,7 +99,8 @@
         },
         "scroll-step": 5,
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-        "on-click-right": "pavucontrol"
+        "on-click-right": "pavucontrol",
+        "tooltip": false
     },
     "custom/expand": {
         "format": "",
