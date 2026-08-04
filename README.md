@@ -1,82 +1,56 @@
-# Contributors
-Victor Perez Contreras
+# File Management
+All files are stored using _*Stow*_. _*Stow*_ follows the following
+structure:
 
-# Usage
-```bash
-#Installation:
-./main.sh
-```
-Note:
-    After Installing packages reload the terminal and or VM/PC. 
-    This allows the terminal to properly source the fonts.
+`
+Jammer
+├── Folder_Name/                   
+├───── [ File Location ]/
+├──────── [ File/Folder at Location ]
+`
 
-# Updating Files
+` Example:
+Jammer
+├── starship
+├───── starship.toml
+├── backgrounds
+├───── .config
+├──────── backgrounds
+├─────────── Tree.jpg
+└─────────── Anime.jpg
+`
 
-For windows users there is an easy way to link your files. This enables quick functionality to updating files for pushing to GitHub.
+In this example backgrounds are stored at `~/.config/backgrounds`. Starship.toml is simply at `~/starship.toml`. This makes 
 
-
-```bash
-# Prints the possible commands
-make
-```
-
-```bash
-# Prep the files for uploading to GitHub
-make upload
-```
-*Note:* 
-Prepping in the Makefile works for my system. Specify the file locations 
-if you need to move them. For instance, .wezterm.lua is located in 
-__/mnt/c/Users/{username}/__. Depending on your system username it may 
-need to be updated.
-
-# Setup: Windows
-
-![Screenshot](windows/imgs/Window_manager_and_tmux_config.png)
-
-# Components and Reasoning
+# Components & Reasoning
 
 ## OS: Arch
-
-Very difficult learning curve with a large reward. Learning arch has made 
+Very difficult learning curve with a large reward. Learning Arch has made 
 me extremely comfortable in the terminal. I am now fairly proficient in 
-connecting in to wifi (iwctl), managing packages and conflits using yay 
-and pacman, and fairly deep into ricing.
+connecting in to WiFi using _NetworkManager_, managing and resolving packages with _yay_/_pacman_, setting up custom processes with _Systemd_.
 
 ## Editor: Neovim
-
-I love vim but wanted to add more functionality and customization for 
-specific use cases. Neovim has allowed be to improve my vim experience
+I love _Vim_ but wanted to add more functionality and customization for 
+specific use cases. _Neovim_ has allowed be to improve my vim experience
 with customization such as a file tree system, LSPs, and other functions
-that I have incorporated into my enviorment.
+that I have incorporated into my environment.
 
 ## Terminal Prompt: Starship
-
 - Fast and light way terminal. 
-
 - Very sleek as well.
 
 ## ZSH
-
 Allows for autocompletion and history, greatly increasing workflow.
 
-## WezTerm
-
-Easy to use on windows and customizable. Helps remove key binding 
-conflicts from the base Windows terminal emulator. WSL is better 
-but has many keybing conflicts.
-
-## Terminal Multiplexer: Zellij
-
-Tmux is amazing but I have a lot of issues with configurations 
-and resurrection of sessions. Instead of dealing with the forever, 
-I have deciced to learn zellij to perhaps improve my terminal 
-multiplexing experience.
+## Tmux
+Tmux is amazing at maintaining multiple sessions while preserving individual
+history for each. This is the main advantage when working remotely as it is
+easy to jump immediately back into work. Modern solution overcomplicate a
+simple, reliable solution.
 
 # Inspiration
 
 ## NVIM
-
 Based off of: https://github.com/cpow/neovim-for-newbs
 
 Cpow created a short series giving a tutorial on how to install Neovim. 
@@ -85,28 +59,11 @@ repositories, and other small tweaks for the vim configurations.
 
 I adapted this setup to properly install the rest of my WSL setup.
 
-## Waybar, Wofi, and SwayNC 
+## Astal (Status Bar)
+Based off: https://github.com/ezerinz/epik-shell
 
-***Contributor: Eli Fouts***
+Configuration based off the TypeScript layout but heavily modified.
 
-***Link: https://github.com/elifouts/Dotfiles.git***
-
-### Waybar 
-
-Amazing sleek design. Improvements were made for my liking such as adding a 
-power button, coloring the bar, and editing the active layout button to my likings.
-
-### Wofi
-
-Adjusted the blur to fit my likings.
-
-### SwayNC
-
-Removed icons, changed the color scheme, and made other small tweaks.
-
-# Windows Specific
-
-Glaze: https://github.com/glzr-io/glazewm
-
-Config file stored manually. Copy file to setup folder.
+# Contributors
+Victor Perez Contreras
 
