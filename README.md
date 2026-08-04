@@ -6,7 +6,7 @@ structure:
 Jammer
 ├── Folder_Name/                   
 ├───── [ File Location ]/
-├──────── [ File/Folder at Location ]
+└──────── [ File/Folder at Location ]
 ```
 
 ```
