@@ -2,14 +2,16 @@
 All files are stored using _*Stow*_. _*Stow*_ follows the following
 structure:
 
-`
+```
 Jammer
 ├── Folder_Name/                   
 ├───── [ File Location ]/
 ├──────── [ File/Folder at Location ]
-`
+```
 
-` Example:
+```
+Example:
+
 Jammer
 ├── starship
 ├───── starship.toml
@@ -18,7 +20,7 @@ Jammer
 ├──────── backgrounds
 ├─────────── Tree.jpg
 └─────────── Anime.jpg
-`
+```
 
 In this example backgrounds are stored at `~/.config/backgrounds`. Starship.toml is simply at `~/starship.toml`. This makes 
 
